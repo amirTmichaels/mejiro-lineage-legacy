@@ -1,16 +1,16 @@
 :root {
-  --bg: #0b0d0f;
-  --bg-soft: #11161a;
-  --panel: rgba(19, 23, 27, 0.88);
+  --bg: #080b0d;
+  --bg-soft: #11161b;
+  --panel: rgba(18, 22, 26, 0.82);
   --panel-strong: #171d21;
-  --gold: #d0ad67;
-  --gold-soft: #f2d7a1;
-  --ivory: #efe5d0;
-  --ink: #101417;
-  --text: #f0ece5;
-  --muted: #b9b0a3;
+  --gold: #d4b06c;
+  --gold-soft: #f4ddae;
+  --ivory: #efe4d1;
+  --ink: #0f1418;
+  --text: #f3efe7;
+  --muted: #beb4a7;
   --rule: rgba(255, 255, 255, 0.08);
-  --shadow: rgba(0, 0, 0, 0.36);
+  --shadow: rgba(0, 0, 0, 0.38);
 }
 
 * {
@@ -25,19 +25,19 @@ body {
   margin: 0;
   font-family: "Inter", sans-serif;
   background:
-    radial-gradient(circle at top, rgba(208, 173, 103, 0.12), transparent 28%),
-    linear-gradient(180deg, #0a0d0f 0%, #10171c 100%);
+    radial-gradient(circle at top, rgba(212, 176, 108, 0.12), transparent 25%),
+    linear-gradient(180deg, #090d10 0%, #0d1318 100%);
   color: var(--text);
-}
-
-img {
-  max-width: 100%;
-  display: block;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }
 
 .container {
@@ -56,8 +56,8 @@ a {
 .site-header {
   position: sticky;
   top: 0;
-  z-index: 50;
-  background: rgba(9, 12, 14, 0.68);
+  z-index: 30;
+  background: rgba(8, 11, 13, 0.7);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--rule);
 }
@@ -80,11 +80,11 @@ a {
 .brand-mark {
   display: grid;
   place-items: center;
-  width: 2.4rem;
-  height: 2.4rem;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--gold-soft), var(--gold));
-  color: #101417;
+  color: var(--ink);
   font-family: "Cormorant Garamond", serif;
   font-size: 1.6rem;
   font-weight: 700;
@@ -96,12 +96,12 @@ a {
 }
 
 .brand-name {
+  font-size: 0.76rem;
   font-weight: 700;
-  font-size: 0.78rem;
 }
 
 .brand-sub {
-  font-size: 0.65rem;
+  font-size: 0.62rem;
   color: var(--muted);
 }
 
@@ -109,9 +109,9 @@ a {
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  color: var(--muted);
   font-size: 0.9rem;
   letter-spacing: 0.04em;
+  color: var(--muted);
 }
 
 .main-nav a {
@@ -123,7 +123,7 @@ a {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -0.5rem;
+  bottom: -0.55rem;
   height: 1px;
   background: var(--gold-soft);
   transform: scaleX(0);
@@ -142,63 +142,63 @@ a {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 2.4rem;
+  grid-template-columns: 1.08fr 0.92fr;
   align-items: center;
+  gap: 2.2rem;
 }
 
 .eyebrow,
 .section-tag,
-.label {
+.mini-label {
   margin: 0 0 1rem;
   font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.19em;
   text-transform: uppercase;
   color: var(--gold-soft);
 }
 
 .hero-copy h1,
+.archive-intro h2,
 .section-heading h2,
-.museum-intro h2,
-.archive-copy h2 {
+.victory-copy h2 {
   margin: 0;
   font-family: "Cormorant Garamond", serif;
-  color: #f7f2e8;
-  letter-spacing: -0.04em;
   line-height: 0.96;
+  letter-spacing: -0.04em;
+  color: #f7efe6;
 }
 
 .hero-copy h1 {
-  font-size: clamp(3.5rem, 7vw, 6.3rem);
+  font-size: clamp(3.7rem, 8vw, 6.5rem);
   max-width: 560px;
 }
 
 .lead {
-  font-size: 1.08rem;
-  line-height: 1.9;
   max-width: 600px;
-  color: var(--muted);
   margin-top: 1.4rem;
+  color: var(--muted);
+  line-height: 1.85;
+  font-size: 1.04rem;
 }
 
 .hero-actions {
   display: flex;
   align-items: center;
-  gap: 1rem;
   flex-wrap: wrap;
-  margin-top: 2rem;
+  gap: 1rem;
+  margin-top: 2.2rem;
 }
 
 .button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 50px;
-  padding: 0.8rem 1.4rem;
+  min-height: 52px;
+  padding: 0.85rem 1.4rem;
   border-radius: 999px;
   font-weight: 600;
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  transition: transform 0.2s ease;
 }
 
 .button:hover,
@@ -208,8 +208,8 @@ a {
 
 .button-primary {
   background: linear-gradient(135deg, var(--gold) 0%, var(--gold-soft) 100%);
-  color: #101517;
-  box-shadow: 0 18px 35px rgba(208, 173, 103, 0.2);
+  color: #101417;
+  box-shadow: 0 18px 35px rgba(212, 176, 108, 0.2);
 }
 
 .button-secondary {
@@ -227,113 +227,106 @@ a {
   position: relative;
   width: min(520px, 100%);
   aspect-ratio: 0.88;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: linear-gradient(135deg, rgba(208, 173, 103, 0.08), rgba(255, 255, 255, 0.02));
   border-radius: 28px;
   overflow: hidden;
-  box-shadow: 0 26px 60px rgba(0, 0, 0, 0.32);
+  background: linear-gradient(135deg, rgba(212, 176, 108, 0.08), rgba(255, 255, 255, 0.03));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 26px 60px rgba(0, 0, 0, 0.28);
 }
 
 .panel-glow {
   position: absolute;
-  inset: 10% 18% auto auto;
+  right: 15%;
+  top: 10%;
   width: 52%;
   height: 52%;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(208, 173, 103, 0.44), transparent 60%);
-  filter: blur(14px);
+  background: radial-gradient(circle, rgba(212, 176, 108, 0.44), transparent 60%);
+  filter: blur(16px);
 }
 
 .horse-figure {
   position: absolute;
   right: 12%;
-  bottom: 8%;
-  width: 72%;
-  height: 62%;
-  background: linear-gradient(180deg, rgba(232, 219, 195, 0.84), rgba(98, 92, 77, 0.63));
+  bottom: 7%;
+  width: 70%;
+  height: 60%;
+  background: linear-gradient(180deg, rgba(232, 221, 194, 0.9), rgba(89, 84, 75, 0.68));
   clip-path: polygon(
-    8% 78%,
-    18% 68%,
-    30% 60%,
-    44% 49%,
+    10% 76%,
+    20% 67%,
+    30% 59%,
+    46% 48%,
     60% 44%,
-    72% 31%,
+    72% 30%,
     82% 18%,
     92% 16%,
     97% 24%,
-    90% 34%,
-    82% 44%,
-    74% 50%,
-    64% 62%,
-    50% 76%,
+    91% 34%,
+    83% 45%,
+    74% 52%,
+    63% 63%,
+    48% 75%,
     28% 90%,
-    14% 88%
+    16% 88%
   );
   transform: scaleX(-1);
-  opacity: 0.96;
 }
 
-.museum-intro {
+.archive-intro {
   background: rgba(255, 255, 255, 0.02);
 }
 
-.museum-intro h2,
+.archive-intro h2,
 .section-heading h2,
-.archive-copy h2 {
-  font-size: clamp(2.7rem, 5vw, 4.3rem);
+.victory-copy h2 {
+  font-size: clamp(2.8rem, 5vw, 4.1rem);
   margin-bottom: 1.2rem;
 }
 
-.museum-intro p,
-.timeline-item p,
+.archive-intro p,
+.collection-card p,
 .champion-copy p,
-.exhibit-card p,
-.archive-copy p,
+.timeline-item p,
+.victory-copy p,
 .split-head p {
   color: var(--muted);
   line-height: 1.85;
   font-size: 1.04rem;
 }
 
-.exhibit-grid {
-  margin-top: 2.5rem;
+.collection-grid {
+  margin-top: 2.4rem;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.2rem;
 }
 
-.exhibit-card {
-  background: rgba(17, 22, 25, 0.75);
+.collection-card {
+  padding: 1.5rem;
   border: 1px solid var(--rule);
   border-radius: 24px;
-  padding: 1.5rem;
-  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.18);
+  background: rgba(13, 20, 24, 0.72);
+  box-shadow: 0 18px 32px rgba(0, 0, 0, 0.16);
 }
 
-.card-gold {
-  background: linear-gradient(180deg, rgba(208, 173, 103, 0.08), rgba(17, 22, 25, 0.8));
-}
-
-.card-ivory {
-  background: linear-gradient(180deg, rgba(239, 229, 208, 0.06), rgba(17, 22, 25, 0.8));
-}
-
-.card-ink {
-  background: linear-gradient(180deg, rgba(112, 125, 129, 0.08), rgba(17, 22, 25, 0.8));
+.collection-card.elevated {
+  background: linear-gradient(180deg, rgba(212, 176, 108, 0.08), rgba(13, 20, 24, 0.8));
 }
 
 .card-index {
   display: inline-block;
-  font-size: 0.72rem;
-  letter-spacing: 0.18em;
-  color: var(--gold-soft);
   margin-bottom: 1rem;
+  color: var(--gold-soft);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
 }
 
-.exhibit-card h3 {
-  margin: 0 0 0.8rem;
-  font-size: 1.7rem;
+.collection-card h3 {
+  margin: 0 0 0.7rem;
   font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
   color: var(--ivory);
 }
 
@@ -343,12 +336,16 @@ a {
   justify-content: space-between;
 }
 
+.block-gap {
+  margin-bottom: 1.2rem;
+}
+
 .split-head {
   margin-bottom: 2rem;
 }
 
 .split-head p {
-  max-width: 500px;
+  max-width: 480px;
   margin: 0;
 }
 
@@ -357,26 +354,26 @@ a {
   gap: 1.2rem;
 }
 
-.champion-item {
+.champion-card {
   display: grid;
   grid-template-columns: 220px 1fr;
   gap: 1.3rem;
   padding: 1rem;
-  background: rgba(17, 22, 25, 0.78);
+  background: rgba(15, 20, 24, 0.8);
   border: 1px solid var(--rule);
-  border-radius: 26px;
-  box-shadow: 0 18px 32px rgba(0, 0, 0, 0.16);
+  border-radius: 28px;
+  box-shadow: 0 18px 32px rgba(0, 0, 0, 0.15);
 }
 
-.champion-item.reverse {
+.champion-card.reverse {
   grid-template-columns: 1fr 220px;
 }
 
-.champion-item.reverse .portrait {
+.champion-card.reverse .portrait {
   order: 2;
 }
 
-.champion-item.reverse .champion-copy {
+.champion-card.reverse .champion-copy {
   order: 1;
 }
 
@@ -384,7 +381,7 @@ a {
   min-height: 220px;
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.08);
-  background: linear-gradient(135deg, rgba(208, 173, 103, 0.12), rgba(255, 255, 255, 0.03));
+  background: linear-gradient(135deg, rgba(212, 176, 108, 0.12), rgba(255, 255, 255, 0.04));
   position: relative;
   overflow: hidden;
 }
@@ -393,20 +390,20 @@ a {
   content: "";
   position: absolute;
   inset: 18% 22% 10% 18%;
-  background: linear-gradient(180deg, rgba(240, 220, 188, 0.9), rgba(90, 84, 74, 0.7));
+  background: linear-gradient(180deg, rgba(240, 223, 191, 0.9), rgba(83, 79, 70, 0.7));
   clip-path: polygon(
-    10% 80%,
-    22% 66%,
-    32% 60%,
+    8% 80%,
+    20% 67%,
+    31% 60%,
     48% 42%,
     62% 36%,
     76% 18%,
-    89% 12%,
+    90% 12%,
     98% 28%,
     90% 40%,
     84% 48%,
-    72% 60%,
-    61% 70%,
+    74% 60%,
+    60% 71%,
     48% 80%,
     32% 88%,
     16% 90%
@@ -414,11 +411,11 @@ a {
 }
 
 .portrait-two {
-  background: linear-gradient(135deg, rgba(110, 133, 120, 0.15), rgba(255, 255, 255, 0.03));
+  background: linear-gradient(135deg, rgba(108, 132, 121, 0.14), rgba(255, 255, 255, 0.04));
 }
 
 .portrait-three {
-  background: linear-gradient(135deg, rgba(208, 173, 103, 0.1), rgba(58, 70, 82, 0.12));
+  background: linear-gradient(135deg, rgba(212, 176, 108, 0.08), rgba(67, 81, 92, 0.12));
 }
 
 .champion-copy {
@@ -430,13 +427,13 @@ a {
 .champion-copy h3 {
   margin: 0 0 0.7rem;
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(2rem, 4vw, 2.8rem);
-  color: #f5ebdd;
+  font-size: clamp(2.1rem, 4vw, 2.8rem);
+  color: #f8f0ea;
   line-height: 0.96;
 }
 
-.timeline {
-  margin-top: 2.2rem;
+.timeline-grid {
+  margin-top: 2.3rem;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.2rem;
@@ -444,7 +441,7 @@ a {
 
 .timeline-item {
   padding: 1.5rem 1.2rem;
-  background: rgba(17, 22, 25, 0.7);
+  background: rgba(15, 20, 24, 0.75);
   border: 1px solid var(--rule);
   border-radius: 18px;
 }
@@ -452,40 +449,94 @@ a {
 .time-label {
   display: inline-block;
   margin-bottom: 0.8rem;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
   color: var(--gold-soft);
   text-transform: uppercase;
+  font-weight: 700;
 }
 
-.archive-banner {
-  padding-top: 1rem;
+.victory-section {
+  padding-top: 2rem;
 }
 
-.archive-shell {
+.victory-shell {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: 2rem;
+  background: linear-gradient(180deg, rgba(16, 20, 24, 0.9), rgba(11, 16, 19, 0.9));
+  border: 1px solid var(--rule);
+  border-radius: 30px;
+  padding: 2.2rem;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.18);
+}
+
+.trophy-wrap {
+  position: relative;
+  height: 280px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-  padding: 2rem; 
-  background: linear-gradient(180deg, rgba(17, 22, 25, 0.9), rgba(12, 17, 19, 0.9));
-  border: 1px solid var(--rule);
-  border-radius: 28px;
+  justify-content: center;
 }
 
-.archive-mark {
-  display: grid;
-  place-items: center;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(208, 173, 103, 0.2), rgba(208, 173, 103, 0.02) 70%);
-  border: 1px solid rgba(208, 173, 103, 0.24);
-  color: var(--gold-soft);
-  font-family: "Cormorant Garamond", serif;
-  font-size: 5rem;
-  line-height: 1;
+.trophy-base {
+  position: absolute;
+  bottom: 28px;
+  width: 160px;
+  height: 18px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, var(--gold-soft), var(--gold));
+  box-shadow: 0 12px 32px rgba(212, 176, 108, 0.18);
+}
+
+.trophy-cup {
+  position: absolute;
+  bottom: 46px;
+  width: 120px;
+  height: 120px;
+  border-radius: 24px 24px 28px 28px;
+  background: linear-gradient(180deg, #f5d999 0%, #d5af68 100%);
+  box-shadow: 0 12px 32px rgba(212, 176, 108, 0.2);
+}
+
+.trophy-cup::before,
+.trophy-cup::after {
+  content: "";
+  position: absolute;
+  top: -20px;
+  width: 24px;
+  height: 30px;
+  background: var(--gold-soft);
+  border-radius: 12px 12px 0 0;
+}
+
+.trophy-cup::before {
+  left: 16px;
+}
+
+.trophy-cup::after {
+  right: 16px;
+}
+
+.trophy-handle {
+  position: absolute;
+  bottom: 84px;
+  width: 50px;
+  height: 80px;
+  border: 6px solid rgba(244, 221, 174, 0.9);
+  border-bottom: 0;
+  border-radius: 50px 50px 0 0;
+}
+
+.trophy-handle.left {
+  left: 90px;
+  transform: rotate(-12deg);
+}
+
+.trophy-handle.right {
+  right: 90px;
+  transform: rotate(12deg);
 }
 
 .site-footer {
@@ -503,17 +554,17 @@ a {
 
 @media (max-width: 900px) {
   .hero-grid,
-  .exhibit-grid,
-  .timeline,
-  .champion-item,
-  .champion-item.reverse,
-  .archive-shell {
+  .victory-shell,
+  .collection-grid,
+  .timeline-grid,
+  .champion-card,
+  .champion-card.reverse {
     grid-template-columns: 1fr;
     display: block;
   }
 
-  .champion-item.reverse .portrait,
-  .champion-item.reverse .champion-copy {
+  .champion-card.reverse .portrait,
+  .champion-card.reverse .champion-copy {
     order: initial;
   }
 
@@ -521,7 +572,7 @@ a {
     display: none;
   }
 
-  .archive-mark {
+  .trophy-wrap {
     margin-top: 1rem;
   }
 }
@@ -531,13 +582,13 @@ a {
     padding-top: 4rem;
   }
 
-  .button {
-    width: 100%;
-  }
-
   .hero-actions {
     flex-direction: column;
     align-items: stretch;
+  }
+
+  .button {
+    width: 100%;
   }
 
   .section-heading,
