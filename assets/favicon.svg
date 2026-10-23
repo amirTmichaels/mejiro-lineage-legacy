@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Mejiro Lineage emblem">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f6e8b4"/>
+      <stop offset="100%" stop-color="#d7b566"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="26" fill="#0f1720"/>
+  <circle cx="64" cy="64" r="44" fill="none" stroke="url(#g)" stroke-width="6"/>
+  <path d="M36 81 L58 38 L64 47 L73 38 L92 81 L80 81 L72 60 L56 60 L48 81 Z" fill="url(#g)"/>
+  <path d="M52 26 L64 16 L76 26" fill="none" stroke="url(#g)" stroke-width="6" stroke-linecap="round"/>
+  <path d="M64 26 V92" stroke="#f6e8b4" stroke-width="4" stroke-linecap="round" opacity="0.8"/>
+</svg>
